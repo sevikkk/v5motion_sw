@@ -24,20 +24,24 @@
 
 #include <stdio.h>
 
+#include "leds.h"
+
 void *hello_world(void *arg)
 {
-    print("Hello threaded World\r\n");
+    print("Hello threaded World2\r\n");
 }
 
 int main()
 {
     init_platform();
+    leds_init();
 
     /* Initialize xilkernel */
     xilkernel_init();
 
     /* add a thread to be launched once xilkernel starts */
     xmk_add_static_thread(hello_world, 0);
+    xmk_add_static_thread(leds_thread, 0);
 
     /* start xilkernel - does not return control */
     xilkernel_start();
