@@ -43,7 +43,7 @@ void* master_thread(void *arg)
 
 	while (1) {
 		xil_printf("in master: %d\r\n", i++);
-		//sys_sleep(1000);
+		sys_sleep(1000);
 	};
     return (void*)0;
 }
