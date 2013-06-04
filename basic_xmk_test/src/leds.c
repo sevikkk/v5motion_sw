@@ -24,7 +24,7 @@ void* leds_thread(void *arg)
 	int i = 0;
 	while (1) {
 		XGpio_DiscreteWrite(&Gpio, LED_CHANNEL, i++);
-		sys_sleep(1000);
+		sys_sleep(300);
 	};
     return (void*)0;
 }
