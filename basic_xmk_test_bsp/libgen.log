@@ -8,7 +8,12 @@ Command Line: libgen -hw ../xc5v_ep1_hw_platform/system.xml -pe microblaze_0
 
 Staging source files.
 Running DRCs.
+Runnning DRC for lwIP library... 
+
+lwIP can be used with the following EMAC peripherals found in your system:
+hard_ethernet_mac1
 Running generate.
+Big Endian system
 Running post_generate.
 Running include - 'make -s include "COMPILER=mb-gcc" "ARCHIVER=mb-ar"
 "COMPILER_FLAGS=-mno-xl-soft-mul -mxl-multiply-high -mxl-barrel-shift
