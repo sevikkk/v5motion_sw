@@ -133,6 +133,7 @@ get_IEEE_phy_speed(XLlTemac *xlltemacp)
 	u16 phylinkspeed;
 	u32 phy_addr = detect_phy(xlltemacp);
 
+#if 0
 	XLlTemac_PhyWrite(xlltemacp, phy_addr,
 				IEEE_1000_ADVERTISE_REG_OFFSET,
 				ADVERTISE_1000);
@@ -150,6 +151,7 @@ get_IEEE_phy_speed(XLlTemac *xlltemacp)
 	XLlTemac_PhyWrite(xlltemacp, phy_addr,
 				IEEE_CONTROL_REG_OFFSET,
 				control);
+#endif
 
 	/* Read PHY control and status registers is successful. */
 	XLlTemac_PhyRead(xlltemacp, phy_addr,

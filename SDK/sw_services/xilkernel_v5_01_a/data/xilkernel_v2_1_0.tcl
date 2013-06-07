@@ -304,10 +304,10 @@ proc generate {os_handle} {
             xadd_define $config_file $os_handle "verbose"
         }
 
-        ;# set config_debug_mon [xget_value $os_handle "PARAMETER" "debug_mon"]
-        ;# if { $config_debug_mon == "true" } {
-        ;# xadd_define $config_file $os_handle "config_debugmon"
-        ;# }
+        set config_debug_mon [xget_value $os_handle "PARAMETER" "debug_mon"]
+        if { $config_debug_mon == "true" } {
+            xadd_define $config_file $os_handle "config_debugmon"
+        }
     }
 
     set config_enhanced_features [xget_value $os_handle "PARAMETER" "enhanced_features"]
