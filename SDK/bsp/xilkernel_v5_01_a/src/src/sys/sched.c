@@ -92,7 +92,7 @@ void readyq_init(void)
 int scheduler (void)
 {
 
-#ifdef CONFIG_DEBUGMON
+#ifdef CONFIG_DEBUGMON_SCHED
     debugmon_dump_sched_info ();
 #endif
 
